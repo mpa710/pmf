@@ -14,6 +14,8 @@ k = np.linspace(0.5, Lk, Nk)
 k_j = 2     # Jean's wavenumber
 zetaf = 0   # final zeta at k_j integration (ensure continuity)
 
+a = 1 # variable rate of zeta decay
+
 # initial conditions
 count = 0
 for ki in k:
@@ -34,7 +36,7 @@ for ti in range(0, Nt-1):
             zeta = np.tanh(k[ki]) / (np.pi/2) * zetamax
             zetaf  = zeta 
         if k[ki] > k_j:
-            zeta = (1 - np.tanh(1*(k[ki]-k_j))) * zetaf
+            zeta = (1 - np.tanh(a * (k[ki]-k_j))) * zetaf
 
 
         # integrate
