@@ -1,1 +1,3 @@
 ## To create Figures 5-6 (simulation comparisons), these text files are used as the initial conditions, and ran using the methods used under the "Simulation Comparison (Figs 5-6)" code block in the Jupyter notebook.
+
+These contain the four cases explored: helical, non-helical, uniform, and scale-invariant (denoted as scale-inv).
